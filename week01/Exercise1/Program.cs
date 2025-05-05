@@ -13,5 +13,6 @@ class Program
         string lname = Console.ReadLine();
 
         Console.WriteLine($"Your name is {lname}, {fname} {lname}.");
+        hello
     }
 }
