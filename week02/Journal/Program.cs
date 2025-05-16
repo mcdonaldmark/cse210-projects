@@ -1,3 +1,5 @@
+//Added an extra method argument for an individual to include their name in their journal entry.
+
 using System;
 using System.IO;
 class Program
@@ -7,7 +9,7 @@ class Program
         //Creates a new instance of Journal
         Journal journal = new Journal();
 
-        //Welcome banner
+        //Welcome
         Console.WriteLine("Welcome to Your Daily Journal!");
 
         while (true)
