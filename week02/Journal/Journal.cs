@@ -20,10 +20,12 @@ public class Journal
         string prompt = promptGenerator.GenerateRandomPrompt();
 
         Console.WriteLine($"Today's Prompt: {prompt}");
+        Console.Write($"By: ");
+        string name = Console.ReadLine();
         Console.Write("> ");
         string content = Console.ReadLine();
 
-        entries.Add(new Entry(prompt, content));
+        entries.Add(new Entry(name, prompt, content));
         Console.WriteLine("Entry added successfully.\n");
     }
 
@@ -54,7 +56,7 @@ public class Journal
             {
                 foreach (Entry entry in entries)
                 {
-                    writer.WriteLine($"{entry.DateCreated}\n{entry.Prompt}\n{entry.Content}");
+                    writer.WriteLine($"{entry.DateCreated}\n{entry.Prompt}\n{entry.Name}\n{entry.Content}");
                 }
             }
             Console.WriteLine($"Journal entries saved to {filename}");
@@ -77,9 +79,10 @@ public class Journal
                 while (!reader.EndOfStream)
                 {
                     string dateString = reader.ReadLine();
-                    string content = reader.ReadLine();
+                    string name = reader.ReadLine();
                     string prompt = reader.ReadLine();
-                    Entry entry = new Entry(content, prompt);
+                    string content = reader.ReadLine();
+                    Entry entry = new Entry(prompt, name, content);
                     entries.Add(entry);
                 }
             }
