@@ -6,32 +6,38 @@ class Program
     {
         List<Video> videos = new List<Video>();
 
-        Video v1 = new Video("Introduction to C#", "John Smith", 300);
-        v1._comments.Add(new Comment("Alice", "Great video!"));
-        v1._comments.Add(new Comment("Bob", "Thanks for the tutorial!"));
-        v1._comments.Add(new Comment("Charlie", "Very helpful, thanks!"));
-        videos.Add(v1);
+        Video video1 = new Video("Star Wars The Old Republic", "Obi Wan", 3040);
+        video1._comments.Add(new Comment("Miriam", "Great video!"));
+        video1._comments.Add(new Comment("Veronica", "Thanks for the tutorial!"));
+        video1._comments.Add(new Comment("Hector", "Very helpful, thanks!"));
+        video1._comments.Add(new Comment("Giovanni", "Wonderful"));
+        videos.Add(video1);
 
-        Video v2 = new Video("C# OOP Concepts", "Jane Doe", 450);
-        v2._comments.Add(new Comment("David", "Nice explanation of OOP!"));
-        v2._comments.Add(new Comment("Eva", "Very informative, thanks!"));
-        videos.Add(v2);
+        Video video2 = new Video("Star Wars The Force Awakens", "Yoda", 2300);
+        video2._comments.Add(new Comment("Miriam", "Great video!"));
+        video2._comments.Add(new Comment("Veronica", "Thanks for the tutorial!"));
+        video2._comments.Add(new Comment("Hector", "Very helpful, thanks!"));
+        video2._comments.Add(new Comment("Giovanni", "Wonderful"));
+        videos.Add(video2);
 
-        Video v3 = new Video("Debugging Tips in C#", "Mike Johnson", 200);
-        v3._comments.Add(new Comment("Frank", "This saved me a lot of time!"));
-        videos.Add(v3);
+        Video video3 = new Video("Debugging Tips in C#", "Mike Johnson", 2000);
+        video3._comments.Add(new Comment("Miriam", "Great video!"));
+        video3._comments.Add(new Comment("Veronica", "Thanks for the tutorial!"));
+        video3._comments.Add(new Comment("Hector", "Very helpful, thanks!"));
+        video3._comments.Add(new Comment("Giovanni", "Wonderful"));
+        videos.Add(video3);
 
-        foreach (Video v in videos)
+        foreach (Video video in videos)
         {
-            Console.WriteLine("Title: " + v._title);
-            Console.WriteLine("Author: " + v._author);
-            Console.WriteLine("Length: " + v._length + " seconds");
-            Console.WriteLine("Number of comments: " + v.numComments());
+            Console.WriteLine("Title: " + video._title);
+            Console.WriteLine("Author: " + video._author);
+            Console.WriteLine("Length: " + video._length + " seconds");
+            Console.WriteLine("Number of comments: " + video.numComments());
             Console.WriteLine("Comments:");
 
-            foreach (Comment c in v._comments)
+            foreach (Comment comment in video._comments)
             {
-                Console.WriteLine("- " + c._name + ": " + c._text);
+                Console.WriteLine("- " + comment._name + ": " + comment._text);
             }
 
             Console.WriteLine();
