@@ -20,7 +20,7 @@ class Order
 
     public double GetTotalPrice()
     {
-        double totalPrice = 0.0;
+        double totalPrice = 0.00;
         foreach (Product product in products)
         {
             if (product != null)
