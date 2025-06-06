@@ -15,22 +15,22 @@ public class Program
             Console.WriteLine("4. Quit");
             Console.Write("Enter your choice: ");
 
-            int choice = Convert.ToInt32(Console.ReadLine());
+            string choice = Console.ReadLine();
 
             Activity activity;
 
             switch (choice)
             {
-                case 1:
+                case "1":
                     activity = new BreathingActivity();
                     break;
-                case 2:
+                case "2":
                     activity = new ReflectionActivity();
                     break;
-                case 3:
+                case "3":
                     activity = new ListingActivity();
                     break;
-                case 4:
+                case "4":
                     Console.WriteLine("Have a great day!");
                     return;
                 default:

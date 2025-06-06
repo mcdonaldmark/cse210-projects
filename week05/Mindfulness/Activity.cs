@@ -10,8 +10,8 @@ public abstract class Activity
 
     protected Activity(string name, string description)
     {
-        this._name = name;
-        this._description = description;
+        _name = name;
+        _description = description;
     }
 
     public void Start()
