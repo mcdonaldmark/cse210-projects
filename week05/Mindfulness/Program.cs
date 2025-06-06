@@ -37,7 +37,6 @@ public class Program
                     Console.WriteLine("Invalid choice. Try again.");
                     continue;
             }
-
             Console.Clear();
             activity.Start();
             Console.Clear();
