@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 
 public class Program
 {
@@ -12,12 +13,12 @@ public class Program
       while (!exitProgram)
       {
          Console.WriteLine("Eternal Quest - Goal Tracker");
-         Console.WriteLine("-----------------------------");
          Console.WriteLine("1. View Goals");
          Console.WriteLine("2. Add Goal");
          Console.WriteLine("3. Record Event");
          Console.WriteLine("4. Save Goals");
-         Console.WriteLine("5. Exit");
+         Console.WriteLine("5. Load Goals");
+         Console.WriteLine("6. Exit");
          Console.Write("Enter your choice: ");
          string choice = Console.ReadLine();
          Console.WriteLine();
@@ -37,7 +38,11 @@ public class Program
                SaveGoals();
                break;
             case "5":
+               LoadGoals();
+               break;
+            case "6":
                exitProgram = true;
+               Console.WriteLine("Have a great day!");
                break;
             default:
                Console.WriteLine("Invalid choice. Please try again.");

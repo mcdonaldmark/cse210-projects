@@ -1,6 +1,5 @@
 using System;
 
-// Define the base class for all goals
 public abstract class Goal
 {
     public string _name { get; set; }

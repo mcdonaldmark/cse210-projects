@@ -2,8 +2,8 @@ using System;
 
 public class ChecklistGoal : Goal
 {
-    public int TargetCount { get; }
-    public int CurrentCount { get; private set; }
+    public int TargetCount { get; set; }
+    public int CurrentCount { get; set; }
 
     public ChecklistGoal(string name, int value, int targetCount) : base(name, value)
     {
