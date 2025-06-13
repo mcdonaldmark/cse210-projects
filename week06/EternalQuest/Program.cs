@@ -59,10 +59,10 @@ public class Program
          Console.WriteLine("Goals:");
          foreach (var goal in goals)
          {
-            string completionStatus = goal.Completed ? "[X]" : "[ ]";
+            string completionStatus = goal._completed ? "[X]" : "[ ]";
             string goalInfo = goal is ChecklistGoal checklistGoal
-                ? $"{completionStatus} {goal.Name} (Completed {checklistGoal.CurrentCount}/{checklistGoal.TargetCount} times)"
-                : $"{completionStatus} {goal.Name}";
+                ? $"{completionStatus} {goal._name} (Completed {checklistGoal.CurrentCount}/{checklistGoal.TargetCount} times)"
+                : $"{completionStatus} {goal._name}";
 
             Console.WriteLine(goalInfo);
          }

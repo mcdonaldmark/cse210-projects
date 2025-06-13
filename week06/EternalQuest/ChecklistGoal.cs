@@ -14,12 +14,12 @@ public class ChecklistGoal : Goal
     public override void Complete()
     {
         CurrentCount++;
-        Console.WriteLine($"You recorded progress for checklist goal '{Name}'. You earned {Value} points.");
+        Console.WriteLine($"You recorded progress for checklist goal '{_name}'. You earned {_value} points.");
 
         if (CurrentCount >= TargetCount)
         {
-            Completed = true;
-            Console.WriteLine($"Congratulations! Goal '{Name}' completed {TargetCount} times. You earned a bonus of {Value} points.");
+            _completed = true;
+            Console.WriteLine($"Congratulations! Goal '{_name}' completed {TargetCount} times. You earned a bonus of {_value} points.");
         }
     }
 }

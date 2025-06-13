@@ -8,7 +8,7 @@ public class SimpleGoal : Goal
 
     public override void Complete()
     {
-        Completed = true;
-        Console.WriteLine($"Goal '{Name}' completed! You earned {Value} points.");
+        _completed = true;
+        Console.WriteLine($"Goal '{_name}' completed! You earned {_value} points.");
     }
 }

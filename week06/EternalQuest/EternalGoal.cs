@@ -8,6 +8,6 @@ public class EternalGoal : Goal
 
     public override void Complete()
     {
-        Console.WriteLine($"You recorded progress for eternal goal '{Name}'. You earned {Value} points.");
+        Console.WriteLine($"You recorded progress for eternal goal '{_name}'. You earned {_value} points.");
     }
 }

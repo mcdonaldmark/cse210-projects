@@ -1,18 +1,17 @@
 using System;
-using System.Collections.Generic;
 
 // Define the base class for all goals
 public abstract class Goal
 {
-    public string Name { get; set; }
-    public int Value { get; set; }
-    public bool Completed { get; set; }
+    public string _name { get; set; }
+    public int _value { get; set; }
+    public bool _completed { get; set; }
 
     public Goal(string name, int value)
     {
-        Name = name;
-        Value = value;
-        Completed = false;
+        _name = name;
+        _value = value;
+        _completed = false;
     }
 
     public abstract void Complete();
