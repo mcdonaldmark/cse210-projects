@@ -22,7 +22,6 @@ public class Cycling : Activity
 
     public override double GetPace()
     {
-        // Pace = 60 / speed
         return 60 / _speed;
     }
 }
